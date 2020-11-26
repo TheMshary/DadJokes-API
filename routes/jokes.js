@@ -3,6 +3,6 @@ const router = express.Router();
 const { jokeLike } = require("../controllers/jokeController");
 
 // Cookie Create
-router.post("/", jokeLike);
+router.post("/like", jokeLike);
 
 module.exports = router;
