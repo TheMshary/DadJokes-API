@@ -12,7 +12,7 @@ app.use("/jokes", jokeRoutes);
 
 const run = async () => {
   try {
-    await db.sequelize.authenticate();
+    await db.sequelize.sync();
     console.log("Connection to the database successful!");
     await app.listen(8000, () => {
       console.log("The application is running on localhost:8000");
